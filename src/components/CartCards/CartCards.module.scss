@@ -1,0 +1,43 @@
+.cards {
+//   background-color: yellow;
+  margin: 8px;
+  display: flex;
+  border-radius: 10px;
+  .imgdiv {
+    width: 30%;
+
+    img {
+      display: flex;
+      height: 100px;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .cartitem {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 70%;
+    .name {
+      font-weight: 500;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      .price{
+        color: orange;
+        font-weight: 500;
+      }
+
+      button {
+        margin: 10px;
+        background-color: orange;
+        height: 25px;
+        width: 25px;
+        border: 0;
+        border-radius: 5px;
+
+      }
+      
+    }
+  }
+}

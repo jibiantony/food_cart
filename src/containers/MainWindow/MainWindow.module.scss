@@ -1,0 +1,21 @@
+.main{
+    background-color:rgb(187, 182, 182);
+    margin-right:30%;
+    padding: 20px;
+    min-height: 100vh;
+    .category{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .content{
+        h1{
+            margin-bottom: 5px;
+        }
+        p{
+            margin-bottom: 40px;
+        }
+    }
+}
