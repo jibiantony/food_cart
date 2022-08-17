@@ -1,7 +1,7 @@
 const Category = [
   {
     image: "https://cdn-icons-png.flaticon.com/128/263/263075.png",
-    name: " Signature",
+    name: "Signature",
   },
   {
     image: "https://cdn-icons-png.flaticon.com/128/1357/1357240.png",
