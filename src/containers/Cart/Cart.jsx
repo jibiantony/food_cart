@@ -2,10 +2,11 @@ import CartCards from "../../components/CartCards/CartCards";
 import settings from "../../images/settings.svg";
 import styles from "./Cart.module.scss";
 import MenuList from "../../service/MenuList"; 
-import { useRecoilState } from "recoil";
-import { CartList } from "../../Recoil/cards";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { CartList, sumOfQuantity } from "../../Recoil/cards";
 const Cart = () => {
   const [cartItems, setCartItems] = useRecoilState(CartList);
+  const totalPrice = useRecoilValue(sumOfQuantity)
   return (
     <div className={styles.cart}>
       <div className={styles.cart_orders}>
@@ -22,20 +23,20 @@ const Cart = () => {
       <div className={styles.details}>
         <div className={styles.price_detail1}>
           <p>Sub total</p>
-          <p>$ 37.61</p>
+          <p> $ {totalPrice}</p>
         </div>
         <div className={styles.price_detail1}>
           <p>discount Sales</p>
-          <p>- $ 5.00</p>
+          <p>$ -  0.00</p>
         </div>
         <div className={styles.price_detail1}>
           <p>Total Sales after Tax</p>
-          <p>$ 2.25</p>
+          <p> $  0.00</p>
         </div>
         <hr/>
         <div className={styles.price_detail1}>
           <p className={styles.price}>Total</p>
-          <p className={styles.price}>$ 34.86</p>
+          <p className={styles.price}> $ {totalPrice}</p>
         </div>
       </div>
     </div>

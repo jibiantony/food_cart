@@ -15,8 +15,10 @@ const MainWindow = () => {
   return (
     <div className={styles.main}>
       <div className={styles.content}>
+        <div>
         <h1>Welcome, Gorry</h1>
         <p>Discover whatever you need easily !</p>
+        </div>
         <div className={styles.searchbar}>
           <SearchBar search={search} setSearch={setSearch} />
         </div>

@@ -1,5 +1,5 @@
 .main{
-    background-color:rgb(187, 182, 182);
+    background-color:rgb(243, 243, 243);
     margin-right:30%;
     padding: 20px;
     min-height: 100vh;
@@ -11,6 +11,9 @@
         margin-bottom: 50px;
     }
     .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         h1{
             margin-bottom: 5px;
         }
@@ -18,9 +21,10 @@
             margin-bottom: 40px;
         }
         .searchbar{
-            position: absolute;
-            right: 35%;
-            top: 3%;
+            // position: absolute;
+            // display: flex;
+            // right: 35%;
+            // top: 3%;
         }
     }
 }

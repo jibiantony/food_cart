@@ -35,7 +35,7 @@ const Cards = ({id, name, image ,description, price, quantity}) => {
       </div>
       <div className={styles.price}>
         <p>
-        <span className={styles.price_text}> {price} </span>
+        <span className={styles.price_text}> $ {price} </span>
         <span className= {styles.quantity}> /</span>
         <span className={styles.quantity}> {quantity} </span>
         </p>

@@ -11,3 +11,12 @@
     background-color: white;
     border-radius: 16px;
 }
+.selected{
+    background-color: orange;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width : 140px;
+}

@@ -9,6 +9,19 @@ const CartList = atom({
   key: "CartList",
   default: [],
 });
+
+const sumOfQuantity = selector({
+key:"TotalSumofQuanity",
+get:({get}) =>{
+  const price = get(CartList);
+  let totalprice =0;
+  for (const i of price){
+    totalprice+=i.price*i.itemnos;
+  };
+return totalprice.toFixed(2);
+}
+});
+
 const categoryFilterListState = atom({
   key: "FilterByCaterory",
   default: "Croissant",
@@ -28,18 +41,11 @@ const filteredCategoryListState = selector({
     );
   },
 });
-
-// const searchFilteredState = selector({
-//   key : "FilteredSearchList",
-//   get: ({get})=>{
-//     const filter =get(searchFilterState);
-//     const list =get(filteredCategoryListState);
-//   },
-// })
 export {
   CardsList,
   CartList,
   filteredCategoryListState,
   categoryFilterListState,
   searchFilterState,
+  sumOfQuantity
 };

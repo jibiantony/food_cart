@@ -44,7 +44,7 @@ const CartCards = ({ id, image, name, price, itemnos }) => {
           <p> {name}</p>
         </div>
         <div className={styles.info}>
-          <div className={styles.price}>{price}</div>
+          <div className={styles.price}>$ {price}</div>
           <div className={styles.amnt}>
             <button onClick={increasequantity}> + </button>
             {itemnos}
