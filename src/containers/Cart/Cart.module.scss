@@ -6,7 +6,11 @@
   height: 100vh;
   margin-bottom: 30%;
   padding-left: 10px;
-  .cart_orders{
+  display: block;
+  @media screen and (max-width: 1097px) {
+    display: none;
+  }
+  .cart_orders {
     height: 70%;
     overflow: auto;
   }
@@ -19,40 +23,39 @@
     margin-bottom: 20px;
     align-items: center;
     background-color: white;
-        img {
-        height: 20px;
-        width: 20px;
-        margin-right: 40px;
+    img {
+      height: 20px;
+      width: 20px;
+      margin-right: 40px;
     }
-    p{
-        font-size:40px;
-        font-weight: 400;
-        margin-left: 10px;
+    p {
+      font-size: 40px;
+      font-weight: 400;
+      margin-left: 10px;
     }
   }
-  .cartlist{
+  .cartlist {
     margin-top: 50px;
   }
-  .details{
+  .details {
     height: 25%;
-    background-color:rgb(204, 203, 202);
+    background-color: rgb(204, 203, 202);
     margin: 20px;
     padding: 10px;
-    // margin-bottom:30px
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    .price_detail1{
+    .price_detail1 {
       margin: 10px;
       display: flex;
       justify-content: space-between;
     }
-    .price{
+    .price {
       font-size: 30px;
       font-weight: 500;
     }
-    hr{
+    hr {
       border: 1px dashed black;
     }
   }

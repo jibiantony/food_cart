@@ -41,11 +41,17 @@ const filteredCategoryListState = selector({
     );
   },
 });
+
+const cart = atom({
+  key :"CartMobile",
+  default: false
+});
 export {
   CardsList,
   CartList,
   filteredCategoryListState,
   categoryFilterListState,
   searchFilterState,
-  sumOfQuantity
+  sumOfQuantity,
+  cart
 };

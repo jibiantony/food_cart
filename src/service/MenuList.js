@@ -11,7 +11,7 @@ const MenuList = [
   },
   {
     image:
-      "https://breadsandsweets.com/wp-content/uploads/2021/08/croissant-pic-4.jpg",
+      "https://www.seriouseats.com/thmb/DfRqc4EDq7Ny0KpGa21O0P6QVec=/735x0/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2011__08__20110817-166611-flour-croissants-fb708f60c6b943588a4407033182d8a0.jpg",
     name: "Smoke tendeloin Slice Crossiant",
     description:
       "Plain crossiant with smoke tenderloinbeef sliced and vegetable",
@@ -25,7 +25,7 @@ const MenuList = [
       "https://www.seriouseats.com/thmb/DfRqc4EDq7Ny0KpGa21O0P6QVec=/735x0/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2011__08__20110817-166611-flour-croissants-fb708f60c6b943588a4407033182d8a0.jpg",
     name: "Berry Whipped Cream Crossiant",
     description: "Sweet  crossiant with blueberries and strawberries inside",
-    price: 8.92 ,
+    price: 8.92,
     quantity: "3 pcs",
     id: "c3",
     itemcategory: "croissant",
@@ -35,7 +35,7 @@ const MenuList = [
       "https://biancazapatka.com/wp-content/uploads/2021/03/croissants-selbstgemacht-500x500.jpg",
     name: "Sweet granulated sugar Crossiant",
     description: "Sweet grounds in the sky of a wooden cheese",
-    price: 12.99 ,
+    price: 12.99,
     quantity: "3 pcs",
     id: "c4",
     itemcategory: "Croissant",
@@ -45,7 +45,7 @@ const MenuList = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT5IB7zkvqCp6lpbO_abxDhZS2-_7JuDX3XQ&usqp=CAU",
     name: "Sweet Chocolate Chocochips Crossiant",
     description: "Sweet grounds in the sky of a wooden cheese",
-    price: 12.99 ,
+    price: 12.99,
     quantity: "3 pcs",
     id: "c5",
     itemcategory: "Croissant",
@@ -254,7 +254,7 @@ const MenuList = [
     id: "CO01",
     name: "Cappucino",
     description: "Sweet croissant with topping almonds and brown sugar",
-    price:25.5,
+    price: 25.5,
     quantity: "3 pcs",
     type: "Coffee",
     image:
@@ -275,7 +275,7 @@ const MenuList = [
     name: "Latte",
     description: "Sweet croissant with topping almonds and brown sugar",
     price: 10.5,
-    quantity: "3 pcs", 
+    quantity: "3 pcs",
     itemcategory: "Coffee",
     image:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg",
@@ -285,7 +285,7 @@ const MenuList = [
     name: "Black Coffee",
     description: "Sweet croissant with topping almonds and brown sugar",
     price: 7.5,
-    quantity: '3 pcs',
+    quantity: "3 pcs",
     itemcategory: "Coffee",
     image:
       "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg",
@@ -344,7 +344,7 @@ const MenuList = [
     id: "I04",
     name: "Ice Cream",
     description: "Sweet croissant with topping almonds and brown sugar",
-    price:  3.5,
+    price: 3.5,
     quantity: "3 pcs",
     itemcategory: "Ice Cream",
     image:

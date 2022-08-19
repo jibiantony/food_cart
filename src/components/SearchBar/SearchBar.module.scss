@@ -1,20 +1,25 @@
 .searchbar {
-    // width: 30px;
-    // height: 40px;
-    display: flex;
-    background-color: white;
-    border-radius: 16px;
-    align-items: center;
-    img{
-      height: 30px;
-      width: 30px;
-    }
+  display: flex;
+  background-color: white;
+  border-radius: 16px;
+  align-items: center;
+  @media screen and (max-width: 1097px) {
+    margin-bottom: 30px;
+    
+  }
+  img {
+    height: 30px;
+    width: 30px;
+  }
+
   input {
-    // position: absolute;
     height: 40px;
     width: 300px;
     border: 0;
     border-radius: 16px;
     outline: none;
+    @media screen and (max-width: 1097px) {
+     width: 320px;
+    }
   }
 }

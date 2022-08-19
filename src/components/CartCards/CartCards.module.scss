@@ -1,5 +1,4 @@
 .cards {
-//   background-color: yellow;
   margin: 8px;
   display: flex;
   border-radius: 10px;
@@ -23,7 +22,7 @@
     .info {
       display: flex;
       justify-content: space-between;
-      .price{
+      .price {
         color: orange;
         font-weight: 500;
       }
@@ -35,9 +34,7 @@
         width: 25px;
         border: 0;
         border-radius: 5px;
-
       }
-      
     }
   }
 }
