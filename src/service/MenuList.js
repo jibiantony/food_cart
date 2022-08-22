@@ -115,7 +115,7 @@ const MenuList = [
     name: "Smoke Tenderloin Slice Croissant",
     description: "Sweet croissant with topping almonds and brown sugar",
     price: 10.91,
-    quantity: 2,
+    quantity: "2 pcs",
     itemcategory: "Croissant",
     image:
       "https://thumbs.dreamstime.com/b/croissant-roast-beef-sun-dried-tomatoes-butter-cream-lies-plate-wood-table-close-up-blue-232668727.jpg",

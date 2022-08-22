@@ -1,43 +1,39 @@
-import Category from "../../service/Category";
-import cro from "../../images/croissant.jpeg";
 import styles from "./CartCards.module.scss";
 import { CartList } from "../../Recoil/cards";
 import { useRecoilState } from "recoil";
+import PropTypes from "prop-types"
 
-const CartCards = ({ id, image, name, price, itemnos }) => {
+const CartCards = (props) => {
+  const { id, image, name, price, itemnos } = props;
   const [cartlist, setCartList] = useRecoilState(CartList);
 
   const index = cartlist.findIndex((item) => item.id === id);
-  
+
   const increasequantity = () => {
-    console.log(index)
     setCartList([
       ...cartlist.slice(0, index),
-      { ...cartlist[index], itemnos:itemnos + 1 },
-      ...cartlist.slice(index + 1)
+      { ...cartlist[index], itemnos: itemnos + 1 },
+      ...cartlist.slice(index + 1),
     ]);
   };
 
   const decreasequantity = () => {
-      if( itemnos ===1){
-        const cartlistcopy = [...cartlist]
-        cartlistcopy.splice(index,1)
-        setCartList(cartlistcopy);
-      }
-      else{
-        setCartList([
-          ...cartlist.slice(0, index),
-          { ...cartlist[index], itemnos:itemnos - 1 },
-          ...cartlist.slice(index + 1)
-        ]);
-      }
-    
-    
+    if (itemnos === 1) {
+      const cartlistcopy = [...cartlist];
+      cartlistcopy.splice(index, 1);
+      setCartList(cartlistcopy);
+    } else {
+      setCartList([
+        ...cartlist.slice(0, index),
+        { ...cartlist[index], itemnos: itemnos - 1 },
+        ...cartlist.slice(index + 1),
+      ]);
+    }
   };
   return (
     <div className={styles.cards}>
       <div className={styles.imgdiv}>
-        <img src={image} />
+        <img src={image} alt="food_image.png" />
       </div>
       <div className={styles.cartitem}>
         <div className={styles.name}>
@@ -54,5 +50,12 @@ const CartCards = ({ id, image, name, price, itemnos }) => {
       </div>
     </div>
   );
+};
+CartCards.propTypes = {
+  id: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
+  itemnos: PropTypes.number,
 };
 export default CartCards;

@@ -1,14 +1,11 @@
 import Cards from "../../components/Cards/Cards"
 import styles from "./OrderList.module.scss"
-import MenuList from "../../service/MenuList"
-import CategoryList from "../../service/Category"
-import {CardsList, filteredCategoryListState} from "../../Recoil/cards"
-import { useRecoilState, useRecoilValue } from "recoil"
-import{categoryFilterListState} from "../../Recoil/cards"
+import { filteredCategoryListState} from "../../Recoil/cards"
+import { useRecoilValue } from "recoil"
 
 
 const OrderList=()=> {
-    const list=useRecoilValue(CardsList)
+    // const list=useRecoilValue(CardsList)
    const catgeorySelector= useRecoilValue(filteredCategoryListState);
 
     return(

@@ -1,12 +1,9 @@
 .mobile_cart {
     position: fixed;
-    // right: 0;
-
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    // padding: 10px;
     display: block;
     .cart_orders {
       height: 70%;
@@ -30,8 +27,6 @@
       p {
         font-size: 30px;
         font-weight: 500;
-        // margin-left: 10px;
-        
       }
     }
     .cartlist {
@@ -40,8 +35,6 @@
     .details {
       height: 25%;
       background-color: rgb(204, 203, 202);
-    //   width: 100%;
-    //   margin: 20px;
       padding: 10px;
       border-radius: 20px;
       display: flex;

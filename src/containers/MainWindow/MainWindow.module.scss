@@ -1,4 +1,6 @@
-
+// *{
+//   border: 2px solid red ;
+// }
 .main {
   background-color: rgb(243, 243, 243);
   margin-right: 30%;
@@ -24,25 +26,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media screen and (max-width: 1097px){
-      .content_mobile{
+    @media screen and (max-width: 1097px) {
+      .content_mobile {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        // background-color: antiquewhite;
       }
     }
-    .content_cartImage{
-      display:none;
+    .content_cartImage {
+      display: none;
       @media screen and (max-width: 1097px) {
         display: block;
-        // background-color: aqua;
         margin-left: 30px;
         justify-content: center;
-        img{
+        img {
           height: 50px;
-          width:50px;
+          width: 50px;
         }
       }
     }
@@ -64,6 +64,12 @@
       @media screen and (max-width: 1097px) {
         font-size: 18px;
       }
+    }
+  }
+  
+  .searchbar{
+    @media screen and (max-width: 1097px) {
+      width:94%
     }
   }
 }
