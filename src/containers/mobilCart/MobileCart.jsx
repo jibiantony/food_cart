@@ -1,12 +1,14 @@
+import React from "react";
 import CartCards from "../../components/CartCards/CartCards";
-import MenuList from "../../service/MenuList";
 import closebutton from "../../images/closebutton.svg"
 import styles from "./MobileCart.module.scss"
 import { useRecoilState, useRecoilValue } from "recoil";
 import { CartList, sumOfQuantity ,cart} from "../../Recoil/cards";
 const MobileCart = () => {
+  // eslint-disable-next-line no-unused-vars
   const [cartItems, setCartItems] = useRecoilState(CartList);
   const totalPrice = useRecoilValue(sumOfQuantity);
+  // eslint-disable-next-line no-unused-vars
   const [ mobileCart, setMobileCart] = useRecoilState(cart);
   return (
     <div className={styles.mobile_cart}>

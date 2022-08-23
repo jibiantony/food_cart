@@ -9,7 +9,10 @@ const CartList = atom({
   key: "CartList",
   default: [],
 });
-
+const Modal= atom({
+  key :"Modal",
+  default : false
+});
 const sumOfQuantity = selector({
 key:"TotalSumofQuanity",
 get:({get}) =>{
@@ -17,7 +20,7 @@ get:({get}) =>{
   let totalprice =0;
   for (const i of price){
     totalprice+=i.price*i.itemnos;
-  };
+  }
 return totalprice.toFixed(2);
 }
 });
@@ -48,6 +51,7 @@ const cart = atom({
 });
 export {
   CardsList,
+  Modal,
   CartList,
   filteredCategoryListState,
   categoryFilterListState,

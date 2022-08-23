@@ -1,4 +1,5 @@
 import CategoryList from "../../components/Category/CategoryList";
+import React from "react";
 import OrderList from "../orderlist/OrderList";
 import styles from "./MainWindow.module.scss";
 import Category from "../../service/Category";
@@ -31,7 +32,7 @@ const MainWindow = () => {
                   setMobileCart(true);
                 }}
               >
-                <img src={cart_image} alt="cart_icon.png"/>
+                <img src={cart_image} alt="cart_icon.png" />
               </div>
             </div>
             <div className={styles.searchbar}>

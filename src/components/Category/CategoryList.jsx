@@ -1,3 +1,4 @@
+import {React} from 'react';
 import { useRecoilState } from "recoil";
 import styles from "./CategoryList.module.scss";
 import { categoryFilterListState } from "../../Recoil/cards";

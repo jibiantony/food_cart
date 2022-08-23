@@ -1,11 +1,13 @@
+import {React} from 'react'
 import CartCards from "../../components/CartCards/CartCards";
 import settings from "../../images/settings.svg";
 import styles from "./Cart.module.scss";
-import MenuList from "../../service/MenuList"; 
+
 import { useRecoilState, useRecoilValue } from "recoil";
 import { CartList, sumOfQuantity } from "../../Recoil/cards";
+// import MenuList from "../../service/MenuList"; 
 const Cart = () => {
-  const [cartItems, setCartItems] = useRecoilState(CartList);
+  const [cartItems] = useRecoilState(CartList);
   const totalPrice = useRecoilValue(sumOfQuantity)
   return (
     <div className={styles.cart}>

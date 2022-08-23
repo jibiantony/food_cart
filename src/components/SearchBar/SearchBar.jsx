@@ -1,3 +1,4 @@
+import {React} from 'react';
 import styles from "./SearchBar.module.scss";
 import searchicon from "../../images/searchicon.svg";
 import PropTypes from "prop-types";
