@@ -2,16 +2,14 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import PropTypes from "prop-types";
 
-import { CartList,Modal } from "../../Recoil/cards";
+import { CartList } from "../../Recoil/cards";
 import styles from "./Cards.module.scss";
 import cartimage from "../../images/cart.svg";
-import ModalComponent from "../modal/ModalComponent";
 
 const Cards = (props) => {
-  const { id, name, image, description, price, quantity } = props;
+  const { id, name, image, description, price, quantity, setModalContent } = props;
   const [cartlist, setCartList] = useRecoilState(CartList);
   // eslint-disable-next-line no-unused-vars
-  const[modal, setModal]= useRecoilState(Modal);
   const addToCart = (e) => {
     e.stopPropagation();
     const index = cartlist.findIndex((item) => item.id === id);
@@ -35,8 +33,8 @@ const Cards = (props) => {
     }
   };
   return (
-    <div className={styles.card_field} onClick={()=>{setModal(true)}}>
-      <ModalComponent id={id} name={name} image={image} description={description} quantity={quantity} price={price} setModal={setModal}/>
+   <div className={styles.outerdiv}>
+     <div className={styles.card_field} onClick={()=>{setModalContent({id,name,image,price,description,quantity})}}>
       <div className={styles.card_image}>
         <div className={styles.cartimage} onClick={addToCart }>
           <img src={cartimage} alt="Cart_image.png" />
@@ -57,6 +55,7 @@ const Cards = (props) => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 
@@ -67,7 +66,7 @@ Cards.propTypes = {
   description: PropTypes.string,
   price: PropTypes.number,
   quantity: PropTypes.string,
-  setModal: PropTypes.func
+  setModalContent: PropTypes.func
 };
 
 Cards.defaultProps={

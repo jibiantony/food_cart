@@ -5,27 +5,23 @@ import { useRecoilState } from "recoil";
 import styles from "./ModalComponent.module.scss";
 import cartimage from "../../images/cart.svg";
 import { CartList } from "../../Recoil/cards";
-import { Modal } from "../../Recoil/cards";
 import closebutton from "../../images/closebutton.svg"
 
 function ModalComponent(props) {
-  const {id, name, description, price, quantity, image } = props;
+  const {productData,onClose} = props;
   const [cartlist, setCartList] = useRecoilState(CartList);
-  const [modal, setModal] = useRecoilState(Modal);
-  useEffect(() => {
-    console.log(modal)
-  }, [modal])
+
   
   const addToCart = () => {
-    const index = cartlist.findIndex((item) => item.id === id);
+    const index = cartlist.findIndex((item) => item.id === productData.id);
     if (index === -1) {
       setCartList([
         ...cartlist,
         {
-          id: id,
-          name: name,
-          image: image,
-          price: price,
+          id: productData.id,
+          name: productData.name,
+          image: productData.image,
+          price: productData.price,
           itemnos: 1,
         },
       ]);
@@ -38,27 +34,26 @@ function ModalComponent(props) {
     }
   };
   return (
-    modal &&
     <div>
       <div id="myModal" className={styles.modal} >
-        <img src={closebutton} className={styles.close} onClick={()=>{setModal(false);}}/>
+        <img src={closebutton} className={styles.close} onClick={onClose}/>
         <div className={styles.card_field}>
           <div className={styles.card_image}>
             <div className={styles.cartimage} onClick={addToCart}>
               <img src={cartimage} alt="Cart_image.png" />
             </div>
-            <img src={image} alt="food_image.png" />
+            <img src={productData.image} alt="food_image.png" />
           </div>
           <div className={styles.details_div}>
             <div className={styles.details}>
-              <p className={styles.name}> {name}</p>
-              <p className={styles.description}> {description}</p>
+              <p className={styles.name}> {productData.name}</p>
+              <p className={styles.description}> {productData.description}</p>
             </div>
             <div className={styles.price}>
               <p>
-                <span className={styles.price_text}> $ {price} </span>
+                <span className={styles.price_text}> $ {productData.price} </span>
                 <span className={styles.quantity}> /</span>
-                <span className={styles.quantity}> {quantity} </span>
+                <span className={styles.quantity}> {productData.quantity} </span>
               </p>
             </div>
           </div>
@@ -68,21 +63,10 @@ function ModalComponent(props) {
   );
 }
 ModalComponent.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  image: PropTypes.string,
-  description: PropTypes.string,
-  price: PropTypes.number,
-  quantity: PropTypes.string,
-  modal: PropTypes.bool
+  productData: PropTypes.object,
+  onClose:PropTypes.func
 }
 ModalComponent.defaultProps={
-  id: "",
-  name: "",
-  image: "",
-  description: "",
-  price: 0,
-  quantity: "",
-  modal: false
+  productData: {}
 }
 export default ModalComponent;

@@ -1,10 +1,13 @@
+.outerdiv{
+  padding: 5px;
+width: 32%;
+min-width: 350px;
 .card_field {
-  width: 25%;
   height: 398px;
   border-radius: 20px;
   position: relative;
   background-color: white;
-  min-width: 350px;
+  
 
   @media screen and (max-width: 767px) {
     height: 220px;
@@ -110,4 +113,5 @@
     font-size: 15px;
     color: bisque;
   }
+}
 }
